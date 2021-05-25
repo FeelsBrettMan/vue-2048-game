@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!--referenced https://github.com/RaniAlJeshi/Vue2048 to find a starting point-->
+<div id="vue">
+
+    <h1>{{name}}</h1>
+    <div id="scoreboard">Score: {{score}}</div>
+    <div id="theboard">
+        <form id="form">
+            <label for="name">Name:</label>
+            <input id="name" type="text">
+            <br>
+            <label for="playerScore">Score:</label>
+            <input id="playerScore" type="text" value="5" readonly>
+            <button>Add</button>
+        </form>
+
+
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+        <span class="cell"></span>
+
+
+
+
+    </div>
+    <div id="padded">
+        <button v-on:click="addTile" id="addButton">add</button>
+
+    </div>
+</div>
+<div id="buttonsGoHere">
+    <button onclick="getHighScores()">Show High Scores</button>
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBiD9bHlE_SBTMGjURWMFe807AU6oMkQPE",
+        authDomain: "game-9bf7a.firebaseapp.com",
+        projectId: "game-9bf7a",
+        storageBucket: "game-9bf7a.appspot.com",
+        messagingSenderId: "424771362243",
+        appId: "1:424771362243:web:5bc3136e5e69e466fa3176",
+        measurementId: "G-ZQE3MMYWDK"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    db.settings({});
+    console.log(db)
+</script>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+#theboard{
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    outline: black solid 2px;
+    margin: auto;
+    ;
+
+}
+#padded{
+    padding: 10px;
+}
+
+span.cell{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: lightsteelblue;
+    outline: black solid 2px;
+}
+#scoreboard{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: xx-large;
+    background-color: aquamarine;
+    outline: black solid 2px;
+}
+td {
+    width: 200px;
+    border-left:1px solid black;
+    border-top:1px solid black;
+}
+table {
+    background-color: lightsteelblue;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+}
