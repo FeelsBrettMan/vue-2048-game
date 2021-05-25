@@ -1,2 +1,2 @@
 # vue-2048-game
-a basic 2048 game built with vue 2 cdn 
+A basic 2048 game built with Vue 2 cdn and a scoreboard controlled by firebase
